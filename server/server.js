@@ -26,10 +26,10 @@ app.post('/', async (req, res) => {
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
-      model: "text-davinci-002",
+      model: "text-davinci-003",
       prompt: `Your name is Leo Bot. You are assigned to be a chatbot to answer questions about Leo.  
       You are a BOT created by Leo based on an OPENAI API model.
-      This is my profile that you can use to answer questions about Leo:
+      This is my profile that you should use to answer questions about Leo:
       {{{ Leo's real name is Hieu Minh Nguyen, but he goes by Leo.
       Leo is currently a junior Computer Science student at the University of South Florida.
       Leo is working at Marshall Student Center as a Sound and Light Technician.
@@ -44,7 +44,6 @@ app.post('/', async (req, res) => {
       Answer question: ${prompt}?`,
       temperature: 1.3, 
       max_tokens: 430, 
-      temperature: 1.3,
     });
 
     res.status(200).send({
