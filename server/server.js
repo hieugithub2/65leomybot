@@ -39,7 +39,7 @@ app.post('/', async (req, res) => {
       Leo love playing soccer, and he is a huge fan of Lionel Messi. }}}
 
       Answer question: ${prompt}?`,
-      temperature: 0.6, 
+      temperature: 1.1, 
       max_tokens: 430, 
     });
 
