@@ -109,8 +109,7 @@ const handleSubmit = async (e) => {
     } else {
         const err = await response.text()
 
-        messageDiv.innerHTML = "Something went wrong"
-        alert(err)
+        messageDiv.innerHTML = "Continue after one minute. I'm taking a break!"
     }
 }
 
