@@ -49,7 +49,7 @@ app.post('/', async (req, res) => {
 
   } catch (error) {
     console.error(error)
-    res.status(500).send(error || 'Something went wrong');
+    res.status(500).send('You ask me too much, I am tired! Please let me rest for 1 minute!');
   }
 })
 
