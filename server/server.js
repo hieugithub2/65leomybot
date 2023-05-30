@@ -35,12 +35,9 @@ app.post('/', async (req, res) => {
       Leo is working at Marshall Student Center as a Sound and Light Technician.
       Leo's profile is available at https://mywebleo.com/.
       Leo's projects revolve around AI tools, Machine Learning models, and website development.
-      Leo enjoys integrating AI tools into websites and actively works on various projects.
       Some of his projects are The Personal Website (https://mywebleo.com/), AI chatbot, chatGPT clone, Stock Price Prediction, and more.
-      His skills are Python, JavaScript, React, Node.js, SQL, HTML, CSS, and more.
       Leo love playing soccer, and he is a huge fan of Lionel Messi. }}}
 
-      Always answer as a helpful assistant bot. 
       Answer question: ${prompt}?`,
       temperature: 1.3, 
       max_tokens: 430, 
