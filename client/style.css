@@ -5,17 +5,35 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
+  color: black;
 }
 
 body {
-  background: #343541;
+  background: #f0f2f4;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  /* color: hsl(219, 15%, 95%); */
+  background-color: #f0f2f4;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 #app {
   width: 100vw;
-  height: 100vh;
-  background: #343541;
-
+  height: 95vh;
+  /* background: #343541; */
+  background: #f0f2f4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +48,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 
   -ms-overflow-style: none;
@@ -37,6 +56,8 @@ body {
 
   padding-bottom: 20px;
   scroll-behavior: smooth;
+  background: #f0f2f4;
+
 }
 
 /* hides scrollbar */
@@ -45,8 +66,10 @@ body {
 }
 
 .wrapper {
-  width: 100%;
+  width: 70%;
   padding: 15px;
+  background-color: #b98779;
+  border-radius: 1rem 1rem 1rem 0;
 }
 
 .ai {
@@ -62,6 +85,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
+
 }
 
 .profile {
@@ -69,7 +93,8 @@ body {
   height: 36px;
   border-radius: 5px;
 
-  background: #5436DA;
+  background: #b98779;
+
 
   display: flex;
   justify-content: center;
@@ -77,19 +102,20 @@ body {
 }
 
 .ai .profile {
-  background: #10a37f;
+  background: #40414F;
+
 }
 
 .profile img {
   width: 60%;
   height: 60%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .message {
   flex: 1;
 
-  color: #dcdcdc;
+  color: #fff;
   font-size: 20px;
 
   max-width: 100%;
@@ -117,11 +143,12 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
+  background: #b98779;
 
   display: flex;
   flex-direction: row;
   gap: 10px;
+  border-radius: 1rem;
 }
 
 textarea {
@@ -132,9 +159,13 @@ textarea {
 
   padding: 10px;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 15px;
   border: none;
   outline: none;
+}
+
+textarea::placeholder {
+  color: #fff;
 }
 
 button {
