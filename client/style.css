@@ -15,7 +15,6 @@ body {
 }
 
 .title{
-  /* color: hsl(219, 15%, 95%); */
   background-color: #f0f2f4;
   font-weight: 700;
   font-size: 1.2rem;
@@ -31,13 +30,13 @@ body {
 
 #app {
   width: 100vw;
-  height: 95vh;
-  /* background: #343541; */
+  height: 100vh;
   background: #f0f2f4;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: .5rem;
 }
 
 #chat_container {
