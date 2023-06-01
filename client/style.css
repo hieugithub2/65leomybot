@@ -43,7 +43,7 @@ body {
 #chat_container {
   flex: 1;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow-y: scroll;
 
   display: flex;
@@ -187,7 +187,7 @@ form img {
   justify-content: center;
   align-items: center;
   height: 150px;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 .button-question{
@@ -204,9 +204,13 @@ form img {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices
+ /* For small devices */
 @media screen and (max-width: 320px){
-  *{
+  .message, .button-question{
+    font-size: 12px;
+  }
+
+  textarea{
     font-size: 12px;
   }
 
@@ -218,25 +222,32 @@ form img {
   .wrapper{
     width: 100%;
   }
-} */
+
+  form img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .chat_container{
+    height: 80%;
+  }
+} 
 
 /* For medium devices */
-/* @media screen and (min-width: 576px){
-  .button-container{
-    width: 90%;
-    height: 100px;
+@media screen and (max-width: 576px) and (min-width: 321px){
+  .message, .button-question{
+    font-size: 14px;
   }
 
-  .wrapper{
-    width: 90%;
+  textarea{
+    font-size: 14px;
   }
 }
 
-@media screen and (min-width: 767px){
+/* @media screen and (min-width: 767px){
   
 }
-For large devices */
-/* @media screen and (min-width: 992px){
+@media screen and (min-width: 992px){
 
-} */
+}  */
 
