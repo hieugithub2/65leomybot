@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
-      model: "text-davinci-002",
+      model: "text-davinci-003",
       prompt: `Your name is Leo Bot. You are assigned to be a chatbot to answer questions about Leo.  
       You are a BOT created by Leo based on an OPENAI API model.
       This is my profile that you should use to answer questions about Leo:
@@ -39,7 +39,7 @@ app.post('/', async (req, res) => {
       Leo love playing soccer, and he is a huge fan of Lionel Messi. }}}
 
       Answer question: ${prompt}?`,
-      temperature: 1.1, 
+      temperature: 1.2, 
       max_tokens: 430, 
     });
 
