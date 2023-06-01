@@ -226,6 +226,10 @@ form img {
     width: 100%;
   }
 
+  form {
+    width: 90%;
+  }
+
   form img {
     width: 20px;
     height: 20px;
@@ -233,6 +237,10 @@ form img {
 
   .chat_container{
     height: 80%;
+  }
+
+  .button-question{
+    height: 30px;
   }
 } 
 
@@ -245,12 +253,23 @@ form img {
   textarea{
     font-size: 14px;
   }
+
+  form {
+    width: 80%;
+  }
+
+  .button-question{
+    height: 30px;
+  }
 }
 
-/* @media screen and (min-width: 767px){
-  
+@media screen and (min-width: 577px) and (max-width: 767px){
+  form {
+    width: 80%;
+  }
 }
+
 @media screen and (min-width: 992px){
 
-}  */
+} 
 
