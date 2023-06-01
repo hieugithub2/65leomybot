@@ -62,16 +62,35 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
-chatContainer.innerHTML += chatStripe(true, "Hello I am a chat bot created by Leo. Ask me anything about us!")
+function buttonStripe(buttonLabels) {
+    return (
+        `
+        <div class="button-container">
+            ${buttonLabels.map(label => `<button class="button-question">${label}</button>`).join('')}
+        </div>
+        `
+    )
+}
 
-const handleSubmit = async (e) => {
+chatContainer.innerHTML += chatStripe(true, "Hello I am a chat bot created by Leo. You can ask me anything about us!")
+chatContainer.innerHTML += chatStripe(true, "It takes me about 30 seconds to have the first answer because Leo is using a free version of hosting service. On behalf of Leo, I sincerely apologize you.")
+
+const buttonLabels = ['Who are you?', 'Who is Leo?', 'Is Leo a bad guy?'];
+chatContainer.innerHTML += buttonStripe(buttonLabels);
+
+const buttonContainers = document.querySelectorAll('.button-question');
+
+const handleSubmit = async (e, prompt) => {
     e.preventDefault()
 
     const data = new FormData(form)
 
     // user's chatstripe
-    chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
-
+    if (! prompt) {
+        chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+    } else {
+        chatContainer.innerHTML += chatStripe(false, prompt)
+    }
     // to clear the textarea input 
     form.reset()
 
@@ -94,7 +113,7 @@ const handleSubmit = async (e) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            prompt: data.get('prompt')
+            prompt: prompt || data.get('prompt')
         })
     })
 
@@ -112,6 +131,13 @@ const handleSubmit = async (e) => {
         messageDiv.innerHTML = "Continue after one minute. I'm taking a break!"
     }
 }
+
+buttonContainers.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const prompt = e.target.textContent;
+        handleSubmit(e, prompt);
+    });
+}); 
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
