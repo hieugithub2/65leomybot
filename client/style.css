@@ -58,6 +58,7 @@ body {
   scroll-behavior: smooth;
   background: #f0f2f4;
 
+  margin-bottom: 20px;
 }
 
 /* hides scrollbar */
