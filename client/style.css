@@ -187,7 +187,7 @@ form img {
   justify-content: center;
   align-items: center;
   height: 150px;
-  width: 20%;
+  min-width: 100px;
 }
 
 .button-question{
@@ -202,3 +202,41 @@ form img {
   transition: all 0.3s ease-in-out;
   margin: .25rem;
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices
+@media screen and (max-width: 320px){
+  *{
+    font-size: 12px;
+  }
+
+  .button-container{
+    width: 80%;
+    height: 100px;
+  }
+
+  .wrapper{
+    width: 100%;
+  }
+} */
+
+/* For medium devices */
+/* @media screen and (min-width: 576px){
+  .button-container{
+    width: 90%;
+    height: 100px;
+  }
+
+  .wrapper{
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 767px){
+  
+}
+For large devices */
+/* @media screen and (min-width: 992px){
+
+} */
+
