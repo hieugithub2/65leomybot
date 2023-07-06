@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     const prompt = req.body.prompt;
 
     const response = await openai.createCompletion({
-      model: "text-curie-001",
+      model: "gpt-3.5-turbo",
       prompt: `Your name is Leo Bot. You are assigned to be a chatbot to answer questions about Leo.  
       You are a BOT created by Leo based on an OpenAI API model.
       This is Leo's profile that you should use to answer questions about Leo:
