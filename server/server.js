@@ -25,26 +25,25 @@ app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: `Your name is Leo Bot. You are assigned to be a chatbot to answer questions about Leo.  
-      You are a BOT created by Leo based on an OpenAI API model.
-      This is Leo's profile that you should use to answer questions about Leo:
-      {{{ Leo's real name is Hieu Minh Nguyen, but he goes by Leo.
-      Leo is currently a junior Computer Science student at the University of South Florida.
-      Leo is working at Marshall Student Center as a Sound and Light Technician.
-      Leo's profile is available at https://mywebleo.com/.
-      Leo's projects revolve around AI tools, Machine Learning models, and website development.
-      Some of his projects are The Personal Website (https://mywebleo.com/), AI chatbot, chatGPT clone, Stock Price Prediction, and more.
-      Leo love playing soccer, and he is a huge fan of Lionel Messi. }}}
-
-      Your task is to answer question: ${prompt}?`,
+    const response = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo-16k",
+      messages: [{"role": "system", "content":"Your name is Leo Bot. You are assigned to be a chatbot to answer questions about Leo.  \
+      You are a BOT created by Leo based on an OpenAI API model. \
+      This is Leo's profile that you should use to answer questions about Leo: \
+      Leo's real name is Hieu Minh Nguyen, but he goes by Leo. \
+      Leo is currently a junior Computer Science student at the University of South Florida.\
+      Leo is working at Resilience, Inc. as an AI ML Developer for myAiMee App and doing application security for other applications in the company. \
+      Leo also working at Marshall Student Center as a Sound and Light Technician.\
+      Leo's profile is available at https://mywebleo.com/.\
+      Leo's projects revolve around AI tools, Machine Learning models, and website development.\
+      Some of Leo's projects are AI chatbot, chatGPT clone, Stock Price Prediction, and more.\
+      Leo love playing soccer, and he is a huge fan of Lionel Messi. "}, {"role":"user", "content":prompt}],
       temperature: 1.2, 
-      max_tokens: 430, 
+      max_tokens: 400, 
     });
 
     res.status(200).send({
-      bot: response.data.choices[0].text
+      bot: response.data.choices[0].message.content
     });
 
   } catch (error) {
