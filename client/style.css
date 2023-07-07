@@ -17,25 +17,22 @@ body {
 .title{
   background-color: #f0f2f4;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
   overflow: hidden;
   justify-content: center;
+  margin-top: .5rem;
   align-items: center;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
 }
 
 #app {
-  /* width: 100vw; */
   height: 100vh;
   background: #f0f2f4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
   margin-bottom: .5rem;
 }
 
@@ -54,11 +51,11 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   scroll-behavior: smooth;
   background: #f0f2f4;
 
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 /* hides scrollbar */
@@ -142,7 +139,7 @@ body {
 form {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: .5rem .5rem;
   padding: 10px;
   background: #b98779;
 
@@ -152,6 +149,8 @@ form {
   border-radius: 1rem;
   position: fixed;
   bottom: 0;
+
+  border: red 3px solid;
 }
 
 textarea {
@@ -165,6 +164,8 @@ textarea {
   border-radius: 15px;
   border: none;
   outline: none;
+  border: red 3px solid;
+
 }
 
 textarea::placeholder {
