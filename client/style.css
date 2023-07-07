@@ -90,9 +90,8 @@ body {
 }
 
 .profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 5px;
+  width: 60px;
+  height: auto;
 
   background: #b98779;
 
@@ -110,6 +109,7 @@ body {
 .profile img {
   width: 60%;
   height: 60%;
+  border-radius: 50%;
   object-fit: cover;
 }
 

@@ -72,9 +72,8 @@ function buttonStripe(buttonLabels) {
     )
 }
 
+chatContainer.innerHTML += chatStripe(true, "It takes me about 30 seconds to have the first answer because Leo is using a free version of hosting service. I sincerely apologize you.")
 chatContainer.innerHTML += chatStripe(true, "Hello I am a chat bot created by Leo. You can ask me anything about us!")
-chatContainer.innerHTML += chatStripe(true, "It takes me about 30 seconds to have the first answer because Leo is using a free version of hosting service. On behalf of Leo, I sincerely apologize you.")
-chatContainer.innerHTML += chatStripe(true, "You can start with those questions below or ask me by typing in the input box.")
 
 const buttonLabels = ['Who are you?', 'Who is Leo?', 'Is Leo a bad guy?'];
 chatContainer.innerHTML += buttonStripe(buttonLabels);
@@ -107,7 +106,7 @@ const handleSubmit = async (e, prompt) => {
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
-
+    // const response = await fetch('http://localhost:3000', {
     const response = await fetch('https://leobot-aw26.onrender.com', {
         method: 'POST',
         headers: {
