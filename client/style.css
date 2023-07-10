@@ -149,8 +149,6 @@ form {
   border-radius: 1rem;
   position: fixed;
   bottom: 0;
-
-  border: red 3px solid;
 }
 
 textarea {
@@ -164,7 +162,6 @@ textarea {
   border-radius: 15px;
   border: none;
   outline: none;
-  border: red 3px solid;
 
 }
 
